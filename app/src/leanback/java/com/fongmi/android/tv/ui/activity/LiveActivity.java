@@ -173,6 +173,7 @@ public class LiveActivity extends BaseActivity implements Clock.Callback, GroupP
         mBinding.control.invert.setOnClickListener(view -> onInvert());
         mBinding.control.across.setOnClickListener(view -> onAcross());
         mBinding.control.change.setOnClickListener(view -> onChange());
+        mBinding.control.setting.setOnClickListener(View -> onSettings());
         mBinding.control.player.setOnClickListener(view -> onPlayer());
         mBinding.control.decode.setOnClickListener(view -> onDecode());
         mBinding.control.player.setOnLongClickListener(view -> onChoose());
@@ -378,6 +379,10 @@ public class LiveActivity extends BaseActivity implements Clock.Callback, GroupP
     private void onChange() {
         Setting.putChange(!Setting.isChange());
         mBinding.control.change.setActivated(Setting.isChange());
+    }
+
+    private void onSettings(){
+        SettingActivity.start(getActivity());
     }
 
     private boolean onChoose() {
