@@ -63,7 +63,7 @@ public class LiveViewModel extends ViewModel {
     public void getEpg(Channel item) {
         String date = formatDate.format(new Date());
         if (item.getData().equal(date)) return;
-        String url = item.getEpg().replace("{date}", date);
+        String url = item.getEpg().replace("{date}", date).replace("{name}", item.getName());
         execute(EPG, () -> {
             Epg epg = Epg.objectFrom(OkHttp.string(url), item.getName(), formatTime);
             item.setData(epg);

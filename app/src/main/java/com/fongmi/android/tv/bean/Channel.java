@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.fongmi.android.tv.App;
+import com.fongmi.android.tv.Constant;
 import com.fongmi.android.tv.R;
 import com.fongmi.android.tv.utils.ImgUtil;
 import com.fongmi.android.tv.utils.ResUtil;
@@ -101,7 +102,7 @@ public class Channel {
     }
 
     public String getLogo() {
-        return TextUtils.isEmpty(logo) ? "" : logo;
+        return TextUtils.isEmpty(logo) ? Constant.DEFAULT_LOGO_URL.replace("{name}", getName()) : logo;
     }
 
     public void setLogo(String logo) {
@@ -109,7 +110,7 @@ public class Channel {
     }
 
     public String getEpg() {
-        return TextUtils.isEmpty(epg) ? "" : epg;
+        return TextUtils.isEmpty(epg) ? Constant.DEFAULT_EPG_URL : epg;
     }
 
     public void setEpg(String epg) {
