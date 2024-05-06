@@ -27,5 +27,5 @@ public class Constant {
     public static final int THREAD_POOL = 5;
 
     public static final String DEFAULT_EPG_URL = "https://diyp.112114.xyz/?ch={name}&date={date}";
-    public static final String DEFAULT_LOGO_URL = "https://live.fanmingming.com/tv/{name}.png";
+    public static final String DEFAULT_LOGO_URL = "https://iptv.mybacc.com/logo?ch={name}";
 }
