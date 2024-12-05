@@ -7,11 +7,10 @@ import com.github.catvod.utils.Util;
 import com.google.common.net.HttpHeaders;
 import com.whl.quickjs.wrapper.JSObject;
 import com.whl.quickjs.wrapper.QuickJSContext;
-import java.security.SecureRandom;
 
+import java.security.SecureRandom;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 import okhttp3.Call;
 import okhttp3.FormBody;
@@ -75,7 +74,7 @@ public class Connect {
     }
 
     private static RequestBody getJsonBody(Req req) {
-        return RequestBody.create(req.getData().toString(), MediaType.get("application/json"));
+        return RequestBody.create(req.getData().toString(), MediaType.get("application/json; charset=utf-8"));
     }
 
     private static RequestBody getRawBody(Req req) {
